@@ -43,16 +43,24 @@ header div i {
 
 header div i:hover {
     background-color: #0022AA;
-    cursor: hand;
+    cursor: pointer;
 }
 
 header nav{
     display: none;
 }
 
+.search {
+    width: 50%;
+}
+
 section img {
     display: block;
     width: 100%;
+}
+
+h1 {
+    display: none;
 }
 
 main h3 {
