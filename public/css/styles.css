@@ -1,5 +1,6 @@
 *{
     font-family: 'Roboto', 'sans-serif';
+    font-size: 12px;
 }
 
 body {
@@ -9,19 +10,42 @@ body {
 header {
     background-color: #EAC926;
     padding: 2% 0% 4% 0%;
+    padding: 5%;
 }
 
 .encabezado {
     display: flex;
+    position: relative;
 }
 
 .encabezado form {
     display: flex;
-    flex-wrap: wrap;
+}
+
+.search-form {
+    width: 100%;
+    padding: 10px;
+    margin: 5% 2%;
+    border-radius: 5px;
+    border: 0px;
+}   
+
+.fas-fa-search {
+    border: none;
+    background-color: white;
+    color: grey;
+    position: absolute;
+    padding: 8px;
+    top: 20%;
+    left: 88%;
 }
 
 .encabezado img {
     width: 50%;
+}
+
+.fas-fa-hand-holding-usd{
+    text-align: center;
 }
 
 .fas-fa-bars {
@@ -40,12 +64,18 @@ header {
     background-color: #0022AA;
     cursor: pointer;
 }
+
  .fas-fa-bars i{
      margin: auto;
  }
 
 header nav{
     display: none;
+}
+
+main section article {
+    margin: 0px 15px 20px 15px;
+    background-color: white;
 }
 
 .last-visit {
@@ -60,23 +90,32 @@ header nav{
 
 .description-item {
     border-top: 1px solid #ebebeb;
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
     padding: 3%;
 }
 
 .description-item .price{
     width: 30%;
+    font-size: 18px;
 }
 
 .description-item .discount {
-    flex-grow: 1;
+    flex-grow:1;
+    font-size: 16px;
+    color: #39b54a;
 }
 
 .description-item .description {
-    margin-top: 0%;
+    font-size: 16px;
+    display: none;
+}
+
+.item:hover .description{
+    display: block;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 [class$="truck"]{
@@ -84,17 +123,12 @@ header nav{
     display: block;
     padding: 2% 1.5%;
     background-color: white;
-}
-
-.description-item i {
-    position: absolute;
-    top: -15%;
-    left: 85%;
     border: 1px solid #39b54a;
     border-radius: 100px;
+    position: relative;
+    margin-top: -9%;
+    margin-left: 90%;
 }
-
-
 
 section img {
     display: block;
@@ -112,40 +146,26 @@ main h3 {
     text-align: center;
 }
 
-main section article {
-    margin: 0px 15px 20px 15px;
-    background-color: white;
-}
-
-
 footer {
     padding: 20px 5%;
     background-color: white;
 }
 
 footer article {
-    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(78, 75, 75);
 }
 
-p {
-    font-size: 12px;
+footer article p {
+    margin-top: 1%;
+    margin-bottom: 15%;
+    text-align: center;
 }
 
 h3 {
-    font-size: 24px;;
-}
-
-.price {
-    font-size: 18px;
-}
-
-.discount{
-    font-size: 16px;
-    color: #39b54a;
-}
-
-.description{
-    font-size: 16px;
+    font-size: 24px;
 }
 
 ul li {
@@ -157,21 +177,36 @@ ul li a{
     color: #666;
 }
 
-
-
-footer [class$="card"]{
-    color: #1259c3;
+[class$="card"]{
+    color: #1259c3;    
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 [class$="gift"]{
     color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 [class$="shield"]{
     color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
+h4 {
+    margin: 0%;
+    font-size: 17px;
+}
 
+@media (min-width: 361px){
+
+}
+
+@media (min-width: 769px){
+
+}
 
 
 
