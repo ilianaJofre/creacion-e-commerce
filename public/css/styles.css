@@ -1,6 +1,6 @@
 *{
     font-family: 'Roboto', 'sans-serif';
-    font-size: 12px;
+    font-size: 1em;
 }
 
 body {
@@ -9,39 +9,39 @@ body {
 
 header {
     background-color: #EAC926;
-    padding: 2% 0% 4% 0%;
     padding: 5%;
 }
 
 .encabezado {
     display: flex;
-    position: relative;
+    align-items: center;
+}
+
+.encabezado img {
+    width: 50%;
 }
 
 .encabezado form {
+    margin-left: 3%;
     display: flex;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
+    height: 6vh;
 }
 
 .search-form {
-    width: 100%;
-    padding: 10px;
-    margin: 5% 2%;
     border-radius: 5px;
-    border: 0px;
+    border: none;
+    width: 100%;
+    font-size: 0.8em;;
 }   
 
 .fas-fa-search {
     border: none;
     background-color: white;
     color: grey;
-    position: absolute;
-    padding: 8px;
-    top: 20%;
-    left: 88%;
-}
-
-.encabezado img {
-    width: 50%;
+    border-radius: 5px;
 }
 
 .fas-fa-hand-holding-usd{
@@ -69,7 +69,7 @@ header {
      margin: auto;
  }
 
-header nav{
+.navegation-bar {
     display: none;
 }
 
@@ -106,6 +106,7 @@ main section article {
     flex-grow:1;
     font-size: 16px;
     color: #39b54a;
+    margin-left: 10%;
 }
 
 .description-item .description {
@@ -115,6 +116,9 @@ main section article {
 
 .item:hover .description{
     display: block;
+}
+
+.item:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
@@ -129,7 +133,12 @@ main section article {
     margin-top: -9%;
     margin-left: 90%;
 }
+.item:hover [class$="truck"]{
+    transform: rotateZ(-45deg);
+    transition: transform 0.3s;
+    transition-timing-function: ease-out;
 
+}
 section img {
     display: block;
     width: 100%;
@@ -142,7 +151,7 @@ h1 {
 main h3 {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 
@@ -160,7 +169,7 @@ footer article {
 
 footer article p {
     margin-top: 1%;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     text-align: center;
 }
 
@@ -171,41 +180,160 @@ h3 {
 ul li {
     list-style-type: none;
 }
-
 ul li a{
     text-decoration: none;
     color: #666;
 }
-
 [class$="card"]{
     color: #1259c3;    
     font-size: 2em;
     margin-bottom: 10px;
 }
-
 [class$="gift"]{
     color: #1259c3;
     font-size: 2em;
     margin-bottom: 10px;
 }
-
 [class$="shield"]{
     color: #1259c3;
     font-size: 2em;
     margin-bottom: 10px;
 }
-
 h4 {
     margin: 0%;
     font-size: 17px;
 }
 
 @media (min-width: 361px){
-
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-bottom: 1.5%;
+    }
+    .encabezado {
+        width: 63%;
+    }
+    .encabezado img {
+        width: 37%;
+    }
+    .fas-fa-bars {
+        display: none;
+    }
+    .fas-fa-hand-holding-usd {
+        width: 37%;
+        align-self: flex-end;
+        margin-bottom: 1%;
+        font-size: 0.75em;
+    }
+    .navegation-bar {
+        display: flex;
+        width: 100%;
+    }
+    .navegation-bar ul {
+        display: flex;
+        padding: 0%;
+        width: 100%;
+        margin-top: 2%;
+    }
+    .navegation-bar ul li {
+        margin-left: 5%;
+    }
+    .navegation-bar ul li:first-child {
+        margin-left: 0%;
+    }
+    .navegation-bar ul li a {
+        color: black;
+        font-size: 0.75em;
+    }
+    .navegation-bar .first-nav {
+        width: 60%;
+    }
+    .navegation-bar .second-nav {
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+    .last-visit {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sale {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item {
+        width: 40%;
+    }
+    .description-item .price {
+        font-size: 1em;
+    }
+    .description-item .discount {
+        font-size: 1em;
+        margin-left: 12%;
+    }
 }
 
 @media (min-width: 769px){
-
+    header {
+        padding: 2%;
+    }
+    .encabezado{
+        width: 70%;
+    }
+    .encabezado img {
+        width: 23%;
+    }
+    .item {
+        width: 20%;
+    }
+    main h3 {
+        text-align: left;
+        margin-left: 6%;
+    }
+    .description-item .price {
+        font-size: 1.2em;
+    }
+    .description-item .discount {
+        font-size: 1.2em;
+        margin-left: 20%;
+    }
+    [class$="truck"]{
+        margin-left: 80%;
+    }
+    .fas-fa-hand-holding-usd {
+        align-self: center;
+        width: 28%;
+        font-size: 0.7em;
+    }
+    .navegation-bar ul li {
+        margin: 0% 1.5%; 
+    }
+    footer {
+        height: 23vh;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+    .copyright {
+        position: absolute;
+        top:75%;
+        left: 5%;
+    }
+    .copyright p {
+        font-size: 0.8em;
+    }
+    footer article {
+        width: 30%;
+    }
+    footer article h4 {
+        font-size: 0.9em;
+    }
+    footer article p {
+        font-size: 0.65em;
+    }
 }
 
 
