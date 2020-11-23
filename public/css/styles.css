@@ -1,7 +1,5 @@
 *{
     font-family: 'Roboto', 'sans-serif';
-    margin: auto;
-
 }
 
 body {
@@ -10,49 +8,93 @@ body {
 
 header {
     background-color: #EAC926;
+    padding: 2% 0% 4% 0%;
 }
 
-header img {
+.encabezado {
+    display: flex;
+}
+
+.encabezado form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.encabezado img {
     width: 50%;
 }
 
-header p:first-child {
-    width: 50%;
-}
-
-header ul {
-    display: none;
-}
-
-header div {
-   text-align: center;
-}
-
-header div i {
-    width: 40px;
-    height: 40px;
+.fas-fa-bars {
+    width: 6%;
+    height: 6%;
     background-color: #0044AA;
     color: white;
     font-size: 20px;
     padding: 10px;
     border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+    display: flex;
+    margin: auto;
 }
 
-header div i:hover {
+.fas-fa-bars:hover {
     background-color: #0022AA;
     cursor: pointer;
 }
+ .fas-fa-bars i{
+     margin: auto;
+ }
 
 header nav{
     display: none;
 }
 
-.search {
-    width: 50%;
+.last-visit {
+    display: flex;
+    flex-direction: column;
 }
+
+.sale {
+    display: flex;
+    flex-direction: column;
+}
+
+.description-item {
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3%;
+}
+
+.description-item .price{
+    width: 30%;
+}
+
+.description-item .discount {
+    flex-grow: 1;
+}
+
+.description-item .description {
+    margin-top: 0%;
+}
+
+[class$="truck"]{
+    color: #39b54a;
+    display: block;
+    padding: 2% 1.5%;
+    background-color: white;
+}
+
+.description-item i {
+    position: absolute;
+    top: -15%;
+    left: 85%;
+    border: 1px solid #39b54a;
+    border-radius: 100px;
+}
+
+
 
 section img {
     display: block;
@@ -115,10 +157,7 @@ ul li a{
     color: #666;
 }
 
-[class$="truck"]{
-    color: #39b54a;
-    display: block;
-}
+
 
 footer [class$="card"]{
     color: #1259c3;
@@ -131,6 +170,7 @@ footer [class$="card"]{
 [class$="shield"]{
     color: #1259c3;
 }
+
 
 
 

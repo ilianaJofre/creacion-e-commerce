@@ -1,3 +1,20 @@
+.input-register {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    border: 0px;
+} 
+
+.title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.checkbox p{
+    display: flex;
+}
+
 .reset{
     width: 100%;
     padding: 10px;
