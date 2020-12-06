@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <%- include('partials/head-base', {title: "Login"}) %>
+    </head>
+    <body>
+        <%- include('partials/header') %>
+        <h1>Login</h1>
+        <main>
+            <form action="index.html" method="GET">
+                <p>
+                   <!-- <label for="userName">Nombre de usuario: </label>-->
+                    <input class="input-login" type="text" name="userName" id="userName" placeholder="Nombre de usuario">
+                </p>
+                <p>
+                    <!--<label for="password">Contraseña: </label>-->
+                    <input class="input-login" type="password" name="password" id="password" placeholder="Elegí tu contraseña">
+                </p>
+                <p>
+                    <button class="submit" type="submit">Enviar</button>
+                </p>
+            </form>
+        </main>
+        <%- include('partials/footer') %>
+        </body>
+</html>
