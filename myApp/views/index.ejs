@@ -11,14 +11,18 @@
         <main>
             <section class="last-visit">
                 <h3>Basado en tu última visita</h3>
-                <% for (let i = 0; i < 8; i++) { %>
-                <%- include('partials/products', {product:products[i]}) %>
+                <% for (let i = 0; i < products.length; i++) { %>
+                    <%  if (products[i].category == "in-sale"){ %>
+                        <%- include('partials/products', {product:products[i]}) %>
+                    <% } %>
                 <% } %>
             </section>
             <section class="sale">
                 <h3>Ofertas</h3>
-                <% for (let i = 8; i < products.length; i++) { %>
-                <%- include('partials/products', {product:products[i]}) %>
+                <% for (let i = 0; i < products.length; i++) { %>
+                    <%  if (products[i].category == "visited"){ %>
+                        <%- include('partials/products', {product:products[i]}) %>
+                    <% } %>
                 <% } %>
             </section>
         </main>

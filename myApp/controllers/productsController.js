@@ -11,10 +11,16 @@ function getProducts(){
             const requiredProduct = products.find((prod) => {
                 return prod.id == req.params.id;
               });
-              if (!requiredProduct) {
+              if (requiredProduct == null) {
                 res.status(404).send("404 not found. <br> ¡No se encuentra el producto!");
-              }
-              res.render('product-detail', { product: requiredProduct });
+              };
+              const toThousand = n => {
+                return n
+                .toString()
+                .replace(".", ",")
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+              };
+              res.render('product-detail', { products: requiredProduct, toThousand: toThousand, });
     }
 };
 

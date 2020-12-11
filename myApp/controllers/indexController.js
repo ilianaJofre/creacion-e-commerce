@@ -7,9 +7,15 @@ function getProducts(){
 
 let index = {
     getIndex: function (req,res){
-            const products = getProducts();
-            res.render('index', { products: products });
-    }
+                const products = getProducts();
+                const toThousand = n => {
+                  return n
+                  .toString()
+                  .replace(".", ",")
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                };
+                res.render('index', { products: products, toThousand: toThousand, });
+             }
 };
 
 module.exports = index;
