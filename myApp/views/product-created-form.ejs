@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <%- include("partials/head-base", {title: "Nuevo Prododucto"}) %>
+    </head>
+    <body>
+        <%- include('partials/header') %>
+        <h1>Login</h1>
+        <main>
+            <form action="/users/login" method="POST">
+                <p>
+                   <label for="name">Nombre del producto: </label>
+                   <input class="input-login" type="text" name="name" id="name" placeholder="Ej: Zapatillas Reebok">
+                </p>
+                <p>
+                    <label for="price">Precio del producto: </label>
+                    <input class="input-login" type="text" name="price" id="price" placeholder="Ej: 5000">
+                </p>
+                <p>
+                    <label for="discount">Descuento: </label>
+                    <input class="input-login" type="discount" name="discount" id="discount" placeholder="Ej: 20">
+                </p>
+                <p>
+                    <label for="category" class="form-label">Categoría:</label>
+                    <select name="category" id="category" class="form-input">
+                        <option value="">Elegí</option>
+                        <option value="in-sale">En oferta</option>
+                        <option value="visited">Últimos agregados</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="description">Descripción: </label>
+                    <input class="input-login" type="description" name="description" id="description" placeholder="Ej: 20">
+                </p>
+                <p>
+                    <button class="submit" type="submit">Guardar producto</button>
+                </p>
+            </form>
+        </main>
+        <%- include('partials/footer') %>
+    </body>
+</html>
